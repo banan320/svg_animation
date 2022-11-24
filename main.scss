@@ -1,0 +1,60 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  background-image: linear-gradient(#eee 1px, transparent 2px),
+    linear-gradient(to right, #eee 1px, transparent 2px);
+  background-size: 1em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  width: 100%;
+  max-width: 600px;
+  max-height: 200px;
+  height: auto;
+  border: 1px solid #555;
+  box-sizing: border-box;
+}
+
+$color-time: 12s;
+$step: $color-time/4;
+
+stop {
+  animation: colors $color-time infinite;
+}
+
+.stop-1 {
+}
+.stop-2 {
+  animation-delay: -$step;
+}
+.stop-3 {
+  animation-delay: -$step * 2;
+}
+
+@keyframes colors {
+  15% {
+    stop-color: #e76868;
+  }
+  30% {
+    stop-color: #c7c417;
+  }
+  45% {
+    stop-color: #fad710;
+  }
+  60% {
+    stop-color: #9acd32;
+  }
+  75% {
+    stop-color: #392dec;
+  }
+  90% {
+    stop-color: #800080;
+  }
+}
